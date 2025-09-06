@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* -------- Styles de fond par page */
+
+body.page-apropos {
+    background-color: #f2f9f9; 
+}
+
+body.page-projets {
+    background-color: #ffffff; 
+}
+
+body.page-competences {
+    background-color: #f4f5f7; 
+}
+
+body.page-contact {
+    background-color: #111827; 
+    color: white; 
+}
+
+
+
+/* -------- Styles à la page index */
+.header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 1rem 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.5rem;
+}
+
+.logo .name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.logo .firstname {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #14b8a6;
+}
+
+.nav {
+    display: none;
+    gap: 2rem;
+}
+
+.nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #14b8a6;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+    }
+}
+
+
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.hero-text {
+    color: white;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.hero-title .accent {
+    color: #14b8a6;
+}
+
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+.cta-lien {
+    background: #14b8a6;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-lien:hover {
+    background: #0f766e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #14b8a666;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-illustration {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+    }
+}
+
+
+
+
+main, .main-content, .about-main, .contact-main, .projects-main, .competences-main {
+    padding-top: 100px; 
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+
+
+
+/* --------- Styles la page À propos */
+
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text {
+    flex: 1 1 55%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+}
+
+.about-text h2 {
+    color: #14b8a6; 
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 1.125rem;
+}
+
+.about-text .highlight {
+    color: #14b8a6;
+    font-weight: 600;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #14b8a6;
+    color: white;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #0f766e;
+}
+
+.about-image {
+    flex: 1 1 35%;
+    text-align: center;
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #14b8a6;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+    }
+    .about-text, .about-image {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .about-image img {
+        margin: 0 auto;
+    }
+}
+
+
+.section-title {
+    text-align: center;
+    color: #14b8a6;
+    font-weight: bold;
+    margin: 2rem 0 1.5rem;
+    font-size: 2rem;
+}
+
+
+p {
+    margin-bottom: 1rem;
+}
+
+
+
+
+/* -------- Styles à la page projet*/
+
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.project-card {
+    background-color: #f0f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    flex: 1 1 calc(33% - 1rem);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.05);
+    text-align: center;
+    min-width: 260px;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 280px; 
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.project-card p {
+    color: #374151;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-card .tags {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.btn-view {
+    display: inline-block;
+    background-color: #14b8a6;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view:hover {
+    background-color: #0f766e;
+}
+
+
+
+/* -------- Styles à la page compétence */
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.skills-box {
+    background-color: #f0f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex: 1 1 42%;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.05);
+}
+
+.skills-box h3 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #111827;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+/* Barres de compétences */
+.skill-bar-container {
+    margin-bottom: 1rem;
+}
+
+.skill-bar-container label {
+    font-size: 0.9rem;
+    color: #374151;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #14b8a6;
+    border-radius: 9999px 0 0 9999px;
+}
+
+.level-80 { width: 80%; }
+.level-60 { width: 60%; }
+.level-75 { width: 75%; }
+.level-90 { width: 90%; }
+.level-70 { width: 70%; }
+.level-65 { width: 65%; }
+.level-85 { width: 85%; }
+
+
+
+
+
+/* -------- Styles à la page contact */
+
+.contact-main {
+    background-color: #111827;
+    color: white;
+    padding: 4rem 1.5rem 6rem;
+    max-width: 600px;
+    margin: 0 auto 6rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 0.3);
+    text-align: center;
+}
+
+.contact-main h2 {
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-main .accent {
+    color: #14b8a6;
+}
+
+.contact-subtitle {
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.accent-link {
+    color: #14b8a6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.accent-link:hover {
+    color: #0f766e;
+    border-color: #0f766e;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #14b8a6;
+    background-color: #f0fdfa;
+}
+
+.btn-send {
+    background-color: #14b8a6;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    align-self: center;
+    margin-top: 1rem;
+    width: 40%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-send:hover {
+    background-color: #0f766e;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .about-section,
+    .projects-container,
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card,
+    .skills-box,
+    .about-text,
+    .about-image {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .contact-main {
+        margin: 0 1rem 6rem;
+    }
+
+    .btn-send {
+        width: 90%;
+    }
+}
+
+
+
+
+/* ---- style au footer---- */
+
+.site-footer {
+  background-color: #f9fafb; 
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  color: #6b7280; 
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 9%;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+
+.footer-link {
+  color: #14b8a6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #0f766e;
+  outline: none;
+  text-decoration: underline;
+}

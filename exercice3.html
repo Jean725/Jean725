@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulation de date</title>
+    <style>
+        /* Style global */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #005f73;
+            margin-bottom: 25px;
+        }
+
+        form {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        input[type="text"] {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 1em;
+            width: 140px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #005f73;
+        }
+
+        button {
+            background-color: #0a9396;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #007f7f;
+        }
+
+        /* Résultats */
+        #resultatJour,
+        #resultatMois,
+        #resultatAnnee,
+        #resultatDifference {
+            margin-top: 15px;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            font-size: 1.1em;
+            color: #005f73;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculateur de dates et de différences en jours</h1>
+
+    <form id="dateFormulaire">
+        <label for="today">Entrez une date :</label>
+        <input type="text" id="today" name="today" placeholder="JJ-MM-AAAA" required />
+        <button type="submit">Calculer</button>
+    </form>
+
+    <p id="resultatJour"></p>
+    <p id="resultatMois"></p>
+    <p id="resultatAnnee"></p>
+    <p id="resultatDifference"></p>
+
+    <script src="exercice3.js"></script>
+</body>
+</html>
